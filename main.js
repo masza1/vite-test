@@ -34,6 +34,10 @@ $.ajax({
   url: 'http://192.168.1.8:8082/laravel-11/artikel-khansa/public/api/login',
   // method: 'GET',
   method: 'POST',
+  data: {
+    email: 'dawdanda@example.com',
+    password: 'Khansa123'
+  },
   // crossDomain: true,
   // headers: {
   //   'Accept': 'application/json',
@@ -43,5 +47,8 @@ $.ajax({
   // },
   success: (data) => {
     console.log(data)
+  },
+  error: (err) => {
+    console.log(err)
   }
 })
